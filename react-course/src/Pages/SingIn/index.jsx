@@ -1,9 +1,11 @@
+import Layout from "../Components/Layout"
+
 function SingIn() {
 
     return (
-      <div className='bg-gray-700'>
+      <Layout>
         SingIn
-      </div>
+      </Layout>
     )
   }
   
