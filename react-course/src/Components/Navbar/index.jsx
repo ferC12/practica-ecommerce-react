@@ -19,6 +19,7 @@ const Navbar = () => {
         <li>
             <NavLink 
             to='/'
+            onClick={() => context.setSearchByCategory()}
             className={({isActive}) => 
                     isActive ? activeStyle : undefined
                 }>
@@ -28,6 +29,7 @@ const Navbar = () => {
         <li>
             <NavLink 
             to='/clothes'
+            onClick={() => context.setSearchByCategory('clothes')}
             className={({isActive}) => 
                     isActive ? activeStyle : undefined
                 }>
@@ -37,6 +39,7 @@ const Navbar = () => {
         <li>
             <NavLink 
             to='/electronics'
+            onClick={() => context.setSearchByCategory('electronics')}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
                 Electronics
@@ -45,6 +48,7 @@ const Navbar = () => {
         <li>
             <NavLink 
             to='/furnitures'
+            onClick={() => context.setSearchByCategory('furniture')}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
                 Furnitures
@@ -53,6 +57,7 @@ const Navbar = () => {
         <li>
             <NavLink 
             to='/toys'
+            onClick={() => context.setSearchByCategory('toys')}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
                 Toys
@@ -61,6 +66,7 @@ const Navbar = () => {
         <li>
             <NavLink 
             to='/others'
+            onClick={() => context.setSearchByCategory('others')}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
                 Others
@@ -99,7 +105,7 @@ const Navbar = () => {
         <li className='flex items-center'>
             <ShoppingCartIcon className='h-4 w-4 text-black'></ShoppingCartIcon>
             <div>
-              {context.count}  
+              {context.cartProducts.length}  
             </div> 
         </li>
         </ul>
